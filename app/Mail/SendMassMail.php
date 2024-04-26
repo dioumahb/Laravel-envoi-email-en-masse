@@ -31,7 +31,7 @@ class SendMassMail extends Mailable
     {
         //N'oubli pas de mettre le mail provider name ici
         return new Envelope(
-            from: new Address('', 'Bmd Technologies'),
+            from: new Address(config('mail.from.address'), 'Bmd Technologies'),
             subject: 'Bienvenu à Bmd Technologies',
         );
     }
